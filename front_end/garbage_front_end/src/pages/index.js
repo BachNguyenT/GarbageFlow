@@ -94,7 +94,7 @@ export default function Home() {
           </a>
 
           <a
-            //href=""
+            href="https://linktr.ee/admin"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
