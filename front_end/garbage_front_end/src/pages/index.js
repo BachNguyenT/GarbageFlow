@@ -52,7 +52,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a
-            href="https://github.com/zefengw/utmist-2023"
+            href="https://github.com/BachNguyenT/utmist-2023.git"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
@@ -94,7 +94,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://linktr.ee/admin"
+            href="https://linktr.ee/garbageflow"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
