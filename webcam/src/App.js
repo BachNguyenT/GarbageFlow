@@ -33,10 +33,10 @@ function App() {
 
     let ctx = photo.getContext('2d');
     ctx.drawImage(video, 0, 0, width, height);
-    let data = ctx.getImageData(10, 20, width, height);
+    let data = ctx.getImageData(0, 0, width, height);
     setHasPhoto(true);
     
-    const img = getImgFromArr(data);
+    const img = getImgFromArr(data,width,height);
     console.log(img);
   }
 
