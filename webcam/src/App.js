@@ -1,4 +1,5 @@
 import React, {useRef, useEffect, useState } from 'react';
+import { getImgFromArr } from 'array-to-image';
 
 function App() {
   const videoRef = useRef(null);
@@ -32,9 +33,17 @@ function App() {
 
     let ctx = photo.getContext('2d');
     ctx.drawImage(video, 0, 0, width, height);
-    let image = ctx.getImageData(10, 20, width, height);
+    let data = ctx.getImageData(10, 20, width, height);
     setHasPhoto(true);
-    console.log(image);
+    console.log(data);
+    for(let i = 0; i < data.length; i += 4) {
+      data[i] = 255; // r
+      data[i + 1] = 0; // g
+      data[i + 2] = 0; // b
+      data[i + 3] = 255; // a
+    }
+    const img = getImgFromArr(data);
+    console.log(img);
   }
 
   const closePhoto = () => {
