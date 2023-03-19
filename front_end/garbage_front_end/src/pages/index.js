@@ -80,7 +80,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://utmist-w2023-webcam.vercel.app"
+            href="https://utmist-2023.vercel.app"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
