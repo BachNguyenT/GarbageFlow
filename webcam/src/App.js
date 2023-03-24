@@ -35,7 +35,13 @@ function App() {
     ctx.drawImage(video, 0, 0, width, height);
     let data = ctx.getImageData(10, 20, width, height);
     setHasPhoto(true);
-    
+    console.log(data);
+    for(let i = 0; i < data.length; i += 4) {
+      data[i] = 255; // r
+      data[i + 1] = 0; // g
+      data[i + 2] = 0; // b
+      data[i + 3] = 255; // a
+    }
     const img = getImgFromArr(data);
     console.log(img);
   }
